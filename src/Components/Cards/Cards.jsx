@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography , Grid } from '@material-ui/core'
-import CardComponent from './Card/Card'
+import CardComponent from './card/Card'
 import styles from './Cards.module.css'
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
@@ -27,7 +27,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
                     cardSubtitle="Number of recoveries from COVID-19 pandemic"
                 />
                 <CardComponent 
-                    className={styles.death}
+                    className={styles.deaths}
                     cardTitle="Deaths"
                     value={deaths.value}
                     lastUpdate={lastUpdate}
