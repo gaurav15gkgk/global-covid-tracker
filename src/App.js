@@ -1,17 +1,31 @@
 
  
- import { Cards, CountryPicker, Chart } from './Components'
+import { Cards, CountryPicker, Chart } from './Components'
+import { fetchData } from './api'
+import React from 'react';
 
-function App() {
-  return (
-    <>
-          <h1>This is covid tracker app</h1>
-          <Cards />
-          <Chart />
-          <CountryPicker />
-    </>
+class App extends React.Component {
  
-  )
+
+  async componentDidMount() {
+    const data = await fetchData();
+
+    console.log(data)
+  }
+
+  
+  render() {
+    
+
+    return (
+      <div >
+        
+        <Cards />
+        <CountryPicker />
+        <Chart  /> 
+      </div>
+    );
+  }
 }
 
 export default App;
