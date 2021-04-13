@@ -12,6 +12,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
         <div className={styles.container }>
             <Typography gutterBottom variant="h4" component="h2">Global</Typography>
             <Grid container spacing={3} justify="center"> 
+            {/*infected card */}
                 <CardComponent 
                     className={styles.infected}
                     cardTitle="Infected"
@@ -19,6 +20,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
                     lastUpdate={lastUpdate}
                     cardSubtitle="Number of active cases from COVID-19 pandemic"
                 />
+
+            {/*Recovered card */}
                 <CardComponent 
                     className={styles.recovered}
                     cardTitle="Recovered"
@@ -26,6 +29,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
                     lastUpdate={lastUpdate}
                     cardSubtitle="Number of recoveries from COVID-19 pandemic"
                 />
+            
+            {/*No of Deaths card */}
                 <CardComponent 
                     className={styles.deaths}
                     cardTitle="Deaths"
